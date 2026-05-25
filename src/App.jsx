@@ -77,36 +77,46 @@ const Reveal = ({ children, delay = 0, style = {} }) => {
 };
 
 // ─── Logo ────────────────────────────────────────────────────────
-const LogoMark = ({ sz = 38 }) => (
-  <svg width={sz} height={sz} viewBox="0 0 100 100" fill="none" style={{ flexShrink: 0 }}>
-    <circle cx="50" cy="50" r="50" fill="#152535" />
-    <defs>
-      <linearGradient id="lgo" x1="25" y1="74" x2="70" y2="22" gradientUnits="userSpaceOnUse">
-        <stop offset="0%"   stopColor="#b83e18" />
-        <stop offset="55%"  stopColor="#e86030" />
-        <stop offset="100%" stopColor="#f48040" />
-      </linearGradient>
-    </defs>
-    <path d="M28 70 C36 58 50 42 67 27 C76 43 73 63 60 71 C52 76 36 74 28 70Z" fill="url(#lgo)" />
-    <path d="M40 65 C46 55 56 44 66 34 C72 46 68 60 58 66 C52 70 44 68 40 65Z" fill="#152535" opacity=".5" />
-    <path d="M63 27 C67 21 73 20 75 25 C72 26 68 27 63 27Z" fill="#5bcdd8" />
-  </svg>
-);
+// Coloca el archivo del logo en /public/logo.png de tu proyecto React
 
-const Logo = ({ sz = 38 }) => (
-  <div style={{ display:"flex", alignItems:"center", gap:"10px" }}>
-    <LogoMark sz={sz} />
-    <div>
-      <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:800, fontSize:sz*.42+"px", letterSpacing:".07em", lineHeight:1.1, color:C.text }}>REDIME</div>
-      <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:500, fontSize:sz*.21+"px", letterSpacing:".14em", lineHeight:1.2, color:C.dim }}>COMUNIDAD DE LA GRACIA</div>
+const Logo = ({ sz = 38, variant = "nav" }) => {
+  if (variant === "standalone") {
+    // Logo completo con fondo blanco, para secciones con espacio
+    return (
+      <img
+        src="/logo.png"
+        alt="REDIME — Comunidad de la Gracia"
+        style={{ width: sz * 2.8 + "px", height: "auto", display:"block" }}
+      />
+    );
+  }
+  // Versión navbar: ícono circular recortado + texto blanco
+  return (
+    <div style={{ display:"flex", alignItems:"center", gap:"10px" }}>
+      <div style={{
+        width: sz + "px", height: sz + "px", borderRadius:"50%",
+        overflow:"hidden", flexShrink:0, background:"#fff",
+        boxShadow:"0 0 0 1.5px rgba(74,184,202,.25)"
+      }}>
+        <img
+          src="/logo.png"
+          alt="REDIME logo"
+          style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center 20%" }}
+        />
+      </div>
+      <div>
+        <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:800, fontSize:sz*.42+"px", letterSpacing:".07em", lineHeight:1.1, color:C.text }}>REDIME</div>
+        <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:500, fontSize:sz*.21+"px", letterSpacing:".14em", lineHeight:1.2, color:C.dim }}>COMUNIDAD DE LA GRACIA</div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // ─── Navbar ──────────────────────────────────────────────────────
 const NAV = [
   { label:"Inicio",        id:"inicio"        },
   { label:"Nosotros",      id:"nosotros"      },
+  { label:"Novedades",     id:"novedades"     },
   { label:"Ministerios",   id:"ministerios"   },
   { label:"Grupos",        id:"grupos"        },
   { label:"Predicaciones", id:"predicaciones" },
@@ -358,7 +368,7 @@ const QuickInfo = () => (
       <InfoCard icon="📍" title="Ubicación" delay={0}
         cta="Ver en mapa"
         ctaHref="https://maps.google.com/?q=Hotel+AKA+Cesar+Carman+Córdoba+Argentina">
-        <strong style={{ color:C.text, fontWeight:700 }}>Hotel AKA</strong><br />
+        <strong style={{ color:C.text, fontWeight:700 }}>Hotel ACA</strong><br />
         Cesar Carman · Córdoba<br />Argentina
       </InfoCard>
 
@@ -452,12 +462,13 @@ const MissionVision = () => (
 
 // ─── Ministries ──────────────────────────────────────────────────
 const MINS = [
-  { icon:"🔥", title:"Jóvenes",        desc:"Espacio de comunidad, enseñanza y crecimiento para jóvenes que buscan a Cristo." },
-  { icon:"🌸", title:"Mujeres",         desc:"Un lugar de encuentro, discipulado y apoyo mutuo para las mujeres de la iglesia." },
-  { icon:"⚓", title:"Hombres",         desc:"Comunidad masculina centrada en el carácter, el servicio y la Palabra de Dios." },
-  { icon:"⭐", title:"Niños",           desc:"Educación bíblica creativa y segura para los más pequeños de la familia." },
-  { icon:"📖", title:"Escuela Bíblica", desc:"Estudio profundo y sistemático de las Escrituras para toda la iglesia." },
-  { icon:"🏠", title:"Grupos Pequeños", desc:"Comunidades por zonas donde la fe se vive y comparte en lo cotidiano." },
+  { icon:"🔥", title:"Jóvenes",            desc:"Espacio de comunidad, enseñanza y crecimiento para jóvenes que buscan a Cristo." },
+  { icon:"🌸", title:"Mujeres",             desc:"Un lugar de encuentro, discipulado y apoyo mutuo para las mujeres de la iglesia." },
+  { icon:"⚓", title:"Hombres",             desc:"Comunidad masculina centrada en el carácter, el servicio y la Palabra de Dios." },
+  { icon:"⭐", title:"Niños",               desc:"Educación bíblica creativa y segura para los más pequeños de la familia." },
+  { icon:"📖", title:"Escuela Bíblica",     desc:"Estudio profundo y sistemático de las Escrituras para toda la iglesia." },
+  { icon:"🏠", title:"Grupos Pequeños",     desc:"Comunidades por zonas donde la fe se vive y comparte en lo cotidiano." },
+  { icon:"🕊️", title:"Ministerio de Rahab", desc:"Un espacio de gracia, restauración y esperanza para mujeres en situación de vulnerabilidad." },
 ];
 
 const MinCard = ({ icon, title, desc, delay }) => {
@@ -508,11 +519,15 @@ const Ministries = () => (
 
 // ─── Small Groups ────────────────────────────────────────────────
 const GROUPS = [
-  { zone:"Zona Norte",    barrio:"Arguello / Urca",        leader:"[Líder por confirmar]", time:"Martes · 19:30 hs"    },
-  { zone:"Zona Sur",      barrio:"Müller / Villa Cabrera", leader:"[Líder por confirmar]", time:"Miércoles · 20:00 hs" },
-  { zone:"Centro",        barrio:"Centro / Alberdi",       leader:"[Líder por confirmar]", time:"Jueves · 19:00 hs"    },
-  { zone:"Nueva Córdoba", barrio:"Nva. Córdoba / Güemes",  leader:"[Líder por confirmar]", time:"Viernes · 19:30 hs"   },
+  { day:"Martes",    tipo:"Mujeres",  leader:"Marcela Messa Kardahi",    barrio:"Bº Palmas de Claret",       address:"Cruz Chica 4685",           time:"8:30 hs",         contact:"351-3664230"  },
+  { day:"Miércoles", tipo:"Mixto",    leader:"Cristian Gansslen",        barrio:"Bº Altos de Manantiales",   address:"Lote 4 Mna 29",             time:"19:00 a 20:30 hs",contact:"351-6171229"  },
+  { day:"Jueves",    tipo:"Mixto",    leader:"Ezequiel Grimi",           barrio:"Bº San Vicente",            address:"Entre Ríos 2116",           time:"20:00 hs",        contact:"11-78997206"  },
+  { day:"Jueves",    tipo:"Mixto",    leader:"Sebastián Cabral",         barrio:"Bº Centro América",         address:"Sofía Bozan 2833",          time:"20:15 hs",        contact:"351-2089981"  },
+  { day:"Jueves",    tipo:"Jóvenes", leader:"Marcelo y Verónica Michell",barrio:"Bº San Fernando",          address:"Pje. Carlos del Signo 360", time:"19:00 hs",        contact:"351-8170687"  },
+  { day:"Viernes",   tipo:"Mixto",    leader:"Manuel Carbonell",         barrio:"Bº Urca",                   address:"Gines García 3884",         time:"20:00 hs",        contact:"351-3571689"  },
 ];
+
+const DAY_COLOR = { "Martes":"#4ab8ca", "Miércoles":"#e06a36", "Jueves":"#7ec8a0", "Viernes":"#c4a85a" };
 
 const SmallGroups = () => (
   <section id="grupos" style={{ background:C.bg, padding:"6rem clamp(1.5rem,8vw,5rem)" }}>
@@ -525,27 +540,44 @@ const SmallGroups = () => (
         </div>
       </Reveal>
 
-      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(230px,1fr))", gap:"1.1rem" }}>
-        {GROUPS.map((g, i) => (
-          <Reveal key={g.zone} delay={i * .09}>
-            <div style={{ background:C.s2, border:`1px solid ${C.border}`, borderRadius:"12px", padding:"1.65rem", position:"relative", overflow:"hidden" }}>
-              <div style={{ position:"absolute", top:0, left:0, right:0, height:"2.5px", background:`linear-gradient(to right,${C.orange},${C.tealLight})` }} />
-              <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".65rem", letterSpacing:".18em", textTransform:"uppercase", color:C.tealLight, marginBottom:".65rem" }}>📍 {g.zone}</div>
-              <div style={{ fontFamily:"'Cormorant Garamond',serif", fontWeight:600, fontSize:"1.35rem", color:C.text, marginBottom:".9rem", lineHeight:1.2 }}>{g.barrio}</div>
-              <div style={{ display:"flex", flexDirection:"column", gap:".35rem" }}>
-                <div style={{ fontFamily:"Lato,sans-serif", fontSize:".84rem", color:C.dim }}>
-                  <span style={{ color:C.text, fontWeight:700 }}>Líder</span> · {g.leader}
+      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))", gap:"1.1rem" }}>
+        {GROUPS.map((g, i) => {
+          const dayCol = DAY_COLOR[g.day] || C.tealLight;
+          return (
+            <Reveal key={g.leader} delay={i * .07}>
+              <div style={{ background:C.s2, border:`1px solid ${C.border}`, borderRadius:"12px", padding:"1.55rem", position:"relative", overflow:"hidden", height:"100%" }}>
+                <div style={{ position:"absolute", top:0, left:0, right:0, height:"3px", background:dayCol }} />
+                <div style={{ display:"flex", alignItems:"center", gap:".55rem", marginBottom:".8rem" }}>
+                  <span style={{ fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".62rem", letterSpacing:".16em", textTransform:"uppercase", color:dayCol }}>{g.day}</span>
+                  <span style={{ width:"3px", height:"3px", borderRadius:"50%", background:C.dim, display:"inline-block" }} />
+                  <span style={{ fontFamily:"Montserrat,sans-serif", fontWeight:500, fontSize:".62rem", letterSpacing:".1em", textTransform:"uppercase", color:C.dim }}>{g.tipo}</span>
                 </div>
-                <div style={{ fontFamily:"Lato,sans-serif", fontSize:".84rem", color:C.dim }}>
-                  <span style={{ color:C.text, fontWeight:700 }}>Horario</span> · {g.time}
+                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontWeight:600, fontSize:"1.2rem", color:C.text, lineHeight:1.2, marginBottom:".85rem" }}>{g.leader}</div>
+                <div style={{ display:"flex", flexDirection:"column", gap:".3rem" }}>
+                  <div style={{ display:"flex", gap:".5rem", alignItems:"flex-start", fontFamily:"Lato,sans-serif", fontSize:".82rem", color:C.dim }}>
+                    <span style={{ color:C.text, fontWeight:700, flexShrink:0 }}>📍</span>
+                    <span>{g.address} · {g.barrio}</span>
+                  </div>
+                  <div style={{ display:"flex", gap:".5rem", alignItems:"center", fontFamily:"Lato,sans-serif", fontSize:".82rem", color:C.dim }}>
+                    <span style={{ color:C.text, fontWeight:700, flexShrink:0 }}>🕐</span>
+                    <span>{g.time}</span>
+                  </div>
+                  <a href={`https://wa.me/54${g.contact.replace(/[-\s]/g,"")}`} target="_blank" rel="noopener"
+                    style={{ display:"flex", gap:".5rem", alignItems:"center", fontFamily:"Lato,sans-serif", fontSize:".82rem", color:C.dim, marginTop:".1rem", transition:"color .2s" }}
+                    onMouseEnter={e => e.currentTarget.style.color = "#25d366"}
+                    onMouseLeave={e => e.currentTarget.style.color = C.dim}
+                  >
+                    <span style={{ flexShrink:0 }}>💬</span>
+                    <span>{g.contact}</span>
+                  </a>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
 
-      <Reveal delay={.38}>
+      <Reveal delay={.46}>
         <div style={{
           marginTop:"1.75rem", padding:"1.4rem 1.75rem", borderRadius:"12px",
           background:C.s2, border:`1px solid ${C.border}`,
@@ -563,12 +595,227 @@ const SmallGroups = () => (
   </section>
 );
 
-// ─── Sermons ─────────────────────────────────────────────────────
-const SERMONS = [
-  { title:"[Predicación destacada]", speaker:"[Pastor]", date:"[Fecha]", desc:"Ingresá al canal para acceder a la prédica más reciente de la iglesia." },
-  { title:"[Serie en curso]",         speaker:"[Pastor]", date:"[Fecha]", desc:"Enseñanza bíblica fiel y accesible para toda la familia." },
-  { title:"[Culto especial]",         speaker:"[Invitado]", date:"[Fecha]", desc:"Momentos especiales guardados para la edificación de la comunidad." },
+// ─── Novedades ───────────────────────────────────────────────────
+// Reemplazá estos datos con los reales. Podés agregar/quitar objetos del array.
+const NEWS = [
+  {
+    tag:"Retiro",
+    date:"14 y 15 de noviembre",
+    title:"Retiro de la iglesia",
+    desc:"Nos vamos juntos a Posada La Campiña. Dos días para descansar, compartir y crecer en comunidad. ¡Anotate y no te lo perdas!",
+    link:"#",
+  },
+  {
+    tag:"Serie",
+    date:"Domingos · 11:00 hs",
+    title:"La misión de la iglesia",
+    desc:"Estamos explorando juntos qué significa ser iglesia en el mundo. Una serie para entender el llamado que tenemos como comunidad.",
+    link:"https://www.youtube.com/@iglesiaredime",
+  },
+  {
+    tag:"Anuncio",
+    date:"[Fecha]",
+    title:"[Próximo anuncio]",
+    desc:"Este espacio está disponible para el siguiente anuncio de la comunidad. Actualizalo desde el array NEWS en el código.",
+    link:"#",
+  },
 ];
+
+const TAG_COLORS = {
+  "Evento":"#e06a36", "Anuncio":"#4ab8ca", "Serie":"#7ec8a0",
+  "Retiro":"#c4a85a", "Comunidad":"#b07dd4", default:"#94a8b8"
+};
+
+const NewsCard = ({ tag, date, title, desc, link, delay }) => {
+  const [hov, setHov] = useState(false);
+  const col = TAG_COLORS[tag] || TAG_COLORS.default;
+  return (
+    <Reveal delay={delay} style={{ flex:"1 1 290px" }}>
+      <a href={link} target={link === "#" ? "_self" : "_blank"} rel="noopener" style={{ display:"block", height:"100%" }}>
+        <div
+          onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+          style={{
+            background: hov ? C.s3 : C.s2,
+            border:`1px solid ${hov ? col+"40" : C.border}`,
+            borderRadius:"12px", padding:"1.65rem", height:"100%",
+            transition:"all .3s ease",
+            transform: hov ? "translateY(-4px)" : "none",
+            boxShadow: hov ? `0 14px 36px rgba(0,0,0,.35)` : "none",
+            display:"flex", flexDirection:"column", gap:".75rem"
+          }}
+        >
+          {/* Top row */}
+          <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+            <span style={{
+              fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".6rem",
+              letterSpacing:".15em", textTransform:"uppercase", color:col,
+              background:`${col}18`, border:`1px solid ${col}30`,
+              padding:"3px 9px", borderRadius:"20px"
+            }}>{tag}</span>
+            <span style={{ fontFamily:"Lato,sans-serif", fontSize:".8rem", color:C.dim }}>{date}</span>
+          </div>
+          {/* Title */}
+          <h3 style={{
+            fontFamily:"'Cormorant Garamond',serif", fontWeight:600,
+            fontSize:"1.3rem", color:C.text, margin:0, lineHeight:1.25
+          }}>{title}</h3>
+          {/* Desc */}
+          <p style={{
+            fontFamily:"Lato,sans-serif", fontWeight:300, fontSize:".88rem",
+            color:C.dim, lineHeight:1.6, margin:0, flex:1
+          }}>{desc}</p>
+          {/* CTA */}
+          <div style={{
+            fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".7rem",
+            letterSpacing:".12em", textTransform:"uppercase",
+            color: hov ? col : C.dim,
+            transition:"color .25s"
+          }}>Ver más →</div>
+        </div>
+      </a>
+    </Reveal>
+  );
+};
+
+const Novedades = () => (
+  <section id="novedades" style={{ background:C.s1, padding:"6rem clamp(1.5rem,8vw,5rem)" }}>
+    <div style={{ maxWidth:"1100px", margin:"0 auto" }}>
+      <Reveal>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", flexWrap:"wrap", gap:"1rem", marginBottom:"2.5rem" }}>
+          <div>
+            <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:600, fontSize:".68rem", letterSpacing:".22em", textTransform:"uppercase", color:C.tealLight, marginBottom:".75rem" }}>Comunidad</div>
+            <h2 style={{ fontFamily:"'Cormorant Garamond',serif", fontWeight:600, fontSize:"clamp(2rem,4vw,3rem)", color:C.text, marginBottom:".75rem" }}>Novedades</h2>
+            <p style={{ fontFamily:"Lato,sans-serif", fontWeight:300, fontSize:".95rem", color:C.dim, maxWidth:"420px", margin:0 }}>
+              Eventos, anuncios y lo que está pasando en la comunidad.
+            </p>
+          </div>
+          <a href="https://www.instagram.com/redimecomunidaddelagracia" target="_blank" rel="noopener"
+            style={{
+              fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".74rem",
+              letterSpacing:".1em", textTransform:"uppercase", color:C.text,
+              padding:"9px 20px", borderRadius:"5px", border:`1px solid ${C.border}`,
+              display:"inline-flex", alignItems:"center", gap:"7px", flexShrink:0,
+              transition:"all .25s"
+            }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "#e1306c"; e.currentTarget.style.color = "#e1306c"; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.text; }}
+          >📸 Ver Instagram</a>
+        </div>
+      </Reveal>
+
+      <div style={{ display:"flex", flexWrap:"wrap", gap:"1.1rem" }}>
+        {NEWS.map((n, i) => <NewsCard key={n.title} {...n} delay={i * .1} />)}
+      </div>
+    </div>
+  </section>
+);
+
+// ─── Sermons ─────────────────────────────────────────────────────
+// Para actualizar: cambiá el videoId, title, tag y desc de cada objeto.
+const SERMONS = [
+  {
+    tag:     "Destacada",
+    videoId: "FjZefjyjKqI",
+    title:   "[Título de la predicación]",
+    speaker: "[Pastor]",
+    date:    "[Fecha]",
+    desc:    "Ingresá al canal para acceder a la prédica más reciente de la iglesia.",
+  },
+  {
+    tag:     "Serie en curso",
+    videoId: "frPh7FerSpM",
+    title:   "[Título de la serie]",
+    speaker: "[Pastor]",
+    date:    "[Fecha]",
+    desc:    "Enseñanza bíblica fiel y accesible para toda la familia.",
+  },
+  {
+    tag:     "Culto especial",
+    videoId: "LK88sH6KBcs",
+    title:   "[Culto especial]",
+    speaker: "[Invitado / Pastor]",
+    date:    "[Fecha]",
+    desc:    "Momentos especiales guardados para la edificación de la comunidad.",
+  },
+];
+
+const TAG_SERMON_COLORS = {
+  "Destacada":"#e06a36", "Serie en curso":"#4ab8ca", "Culto especial":"#c4a85a"
+};
+
+const SermonCard = ({ tag, videoId, title, speaker, date, desc, delay }) => {
+  const [hov, setHov] = useState(false);
+  const col = TAG_SERMON_COLORS[tag] || C.tealLight;
+  const ytUrl   = `https://www.youtube.com/watch?v=${videoId}`;
+  const thumbUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+  return (
+    <Reveal delay={delay}>
+      <a href={ytUrl} target="_blank" rel="noopener" style={{ display:"block", height:"100%" }}>
+        <div
+          onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+          style={{
+            background: C.s2, border:`1px solid ${hov ? col+"45" : C.border}`,
+            borderRadius:"12px", overflow:"hidden",
+            transition:"all .3s ease",
+            transform: hov ? "translateY(-4px)" : "none",
+            boxShadow: hov ? `0 14px 36px rgba(0,0,0,.4)` : "none",
+            display:"flex", flexDirection:"column", height:"100%"
+          }}
+        >
+          {/* Thumbnail */}
+          <div style={{ position:"relative", aspectRatio:"16/9", overflow:"hidden", flexShrink:0 }}>
+            <img
+              src={thumbUrl}
+              alt={title}
+              style={{ width:"100%", height:"100%", objectFit:"cover", transition:"transform .4s ease", transform: hov ? "scale(1.04)" : "scale(1)" }}
+            />
+            {/* Dark overlay + play button */}
+            <div style={{
+              position:"absolute", inset:0,
+              background: hov ? "rgba(0,0,0,.38)" : "rgba(0,0,0,.52)",
+              transition:"background .3s ease",
+              display:"flex", alignItems:"center", justifyContent:"center"
+            }}>
+              <div style={{
+                width:"48px", height:"48px", borderRadius:"50%",
+                background: hov ? C.orange : "rgba(237,233,223,.15)",
+                border:`2px solid ${hov ? C.orange : "rgba(237,233,223,.35)"}`,
+                display:"flex", alignItems:"center", justifyContent:"center",
+                fontSize:"1.1rem", color:"#fff", paddingLeft:"3px",
+                transition:"all .3s ease",
+                boxShadow: hov ? `0 0 20px ${C.orange}55` : "none"
+              }}>▶</div>
+            </div>
+            {/* Tag badge */}
+            <span style={{
+              position:"absolute", top:"10px", left:"10px",
+              fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".58rem",
+              letterSpacing:".14em", textTransform:"uppercase",
+              color: col, background:`rgba(5,14,22,.82)`,
+              border:`1px solid ${col}45`, padding:"3px 8px", borderRadius:"20px",
+              backdropFilter:"blur(6px)"
+            }}>{tag}</span>
+          </div>
+
+          {/* Info */}
+          <div style={{ padding:"1.15rem", flex:1, display:"flex", flexDirection:"column", gap:".4rem" }}>
+            <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:600, fontSize:".63rem", letterSpacing:".13em", color:C.dim, textTransform:"uppercase" }}>
+              {speaker} · {date}
+            </div>
+            <h4 style={{ fontFamily:"'Cormorant Garamond',serif", fontWeight:600, fontSize:"1.15rem", color:C.text, margin:0, lineHeight:1.25 }}>{title}</h4>
+            <p style={{ fontFamily:"Lato,sans-serif", fontWeight:300, fontSize:".84rem", color:C.dim, lineHeight:1.5, margin:0, flex:1 }}>{desc}</p>
+            <div style={{
+              fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".68rem",
+              letterSpacing:".1em", textTransform:"uppercase",
+              color: hov ? col : C.dim, transition:"color .25s", marginTop:".3rem"
+            }}>Ver en YouTube →</div>
+          </div>
+        </div>
+      </a>
+    </Reveal>
+  );
+};
 
 const Sermons = () => (
   <section id="predicaciones" style={{ background:C.s1, padding:"6rem clamp(1.5rem,8vw,5rem)" }}>
@@ -588,33 +835,14 @@ const Sermons = () => (
               display:"inline-flex", alignItems:"center", gap:"7px",
               transition:"all .25s", flexShrink:0
             }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = C.orange; e.currentTarget.style.color = C.orange; }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "#ff4040"; e.currentTarget.style.color = "#ff4040"; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.text; }}
           >▶ Ver canal completo</a>
         </div>
       </Reveal>
 
       <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))", gap:"1.1rem" }}>
-        {SERMONS.map((s, i) => (
-          <Reveal key={s.title} delay={i * .1}>
-            <a href="https://www.youtube.com/@iglesiaredime" target="_blank" rel="noopener" style={{ display:"block" }}>
-              <div
-                style={{ background:C.s2, border:`1px solid ${C.border}`, borderRadius:"12px", overflow:"hidden", transition:"all .3s ease" }}
-                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.borderColor = C.orange+"40"; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = "none"; e.currentTarget.style.borderColor = C.border; }}
-              >
-                <div style={{ height:"150px", background:`linear-gradient(135deg,${C.teal} 0%,${C.s3} 100%)`, display:"flex", alignItems:"center", justifyContent:"center" }}>
-                  <div style={{ width:"50px", height:"50px", borderRadius:"50%", background:"rgba(237,233,223,.1)", border:"2px solid rgba(237,233,223,.25)", display:"flex", alignItems:"center", justifyContent:"center", fontSize:"1.3rem", color:C.text, paddingLeft:"4px" }}>▶</div>
-                </div>
-                <div style={{ padding:"1.2rem" }}>
-                  <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:600, fontSize:".65rem", letterSpacing:".15em", color:C.orange, textTransform:"uppercase", marginBottom:".45rem" }}>{s.speaker} · {s.date}</div>
-                  <h4 style={{ fontFamily:"'Cormorant Garamond',serif", fontWeight:600, fontSize:"1.2rem", color:C.text, margin:"0 0 .45rem" }}>{s.title}</h4>
-                  <p style={{ fontFamily:"Lato,sans-serif", fontWeight:300, fontSize:".84rem", color:C.dim, lineHeight:1.5, margin:0 }}>{s.desc}</p>
-                </div>
-              </div>
-            </a>
-          </Reveal>
-        ))}
+        {SERMONS.map((s, i) => <SermonCard key={s.videoId} {...s} delay={i * .1} />)}
       </div>
     </div>
   </section>
@@ -622,9 +850,10 @@ const Sermons = () => (
 
 // ─── Pastoral Team ───────────────────────────────────────────────
 const TEAM = [
-  { name:"[Pastor Principal]", role:"Pastor Principal",       desc:"Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img:"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
-  { name:"[Pastora / Líder]",  role:"Liderazgo y Discipulado", desc:"Acompañando el crecimiento espiritual de la comunidad con gracia y verdad.",    img:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" },
-  { name:"[Líder de Jóvenes]", role:"Ministerio de Jóvenes",  desc:"Conectando a la próxima generación con Cristo y con la iglesia local.",          img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+  { name:"Manuel Carbonell",  role:"Anciano", desc:"Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img:"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
+  { name:"Cristian Gansslen", role:"Anciano", desc:"Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+  { name:"Eduardo Kardahi",   role:"Anciano", desc:"Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img:"https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
+  { name:"Marcelo Michell",   role:"Anciano", desc:"Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" },
 ];
 
 const Team = () => (
@@ -694,7 +923,7 @@ const Contact = () => (
             <div style={{ borderTop:`1px solid ${C.border}`, paddingTop:"1.5rem" }}>
               <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:700, fontSize:".78rem", letterSpacing:".12em", textTransform:"uppercase", color:C.tealLight, marginBottom:"1rem" }}>Dirección</div>
               <p style={{ fontFamily:"Lato,sans-serif", fontWeight:300, fontSize:".9rem", color:"rgba(237,233,223,.72)", lineHeight:1.75, margin:0 }}>
-                <strong style={{ color:C.text, fontWeight:700 }}>Hotel AKA</strong><br />
+                <strong style={{ color:C.text, fontWeight:700 }}>Hotel ACA</strong><br />
                 Cesar Carman · Córdoba<br />
                 Argentina<br /><br />
                 <strong style={{ color:C.text, fontWeight:700 }}>Domingos · 11:00 hs</strong>
@@ -728,7 +957,7 @@ const Footer = () => (
     <div style={{ maxWidth:"1100px", margin:"0 auto" }}>
       <div style={{ display:"flex", flexWrap:"wrap", gap:"2.5rem", justifyContent:"space-between", marginBottom:"2.5rem" }}>
         <div style={{ flex:"1 1 200px" }}>
-          <Logo sz={32} />
+          <Logo sz={32} variant="standalone" />
           <p style={{ fontFamily:"Lato,sans-serif", fontWeight:300, fontSize:".85rem", color:C.dim, marginTop:"1rem", maxWidth:"210px", lineHeight:1.65 }}>
             Una iglesia bíblica, cálida y centrada en Cristo en Córdoba, Argentina.
           </p>
@@ -737,7 +966,7 @@ const Footer = () => (
           <div style={{ fontFamily:"Montserrat,sans-serif", fontWeight:600, fontSize:".65rem", letterSpacing:".2em", textTransform:"uppercase", color:C.tealLight, marginBottom:".9rem" }}>Horarios</div>
           <p style={{ fontFamily:"Lato,sans-serif", fontWeight:300, fontSize:".86rem", color:C.dim, lineHeight:1.85, margin:0 }}>
             Domingos · 11:00 hs<br />
-            Hotel AKA, Cesar Carman<br />
+            Hotel ACA, Cesar Carman<br />
             Córdoba, Argentina
           </p>
         </div>
@@ -782,6 +1011,7 @@ export default function App() {
         <Hero />
         <QuickInfo />
         <MissionVision />
+        <Novedades />
         <Ministries />
         <SmallGroups />
         <Sermons />
