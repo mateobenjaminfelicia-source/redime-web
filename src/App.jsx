@@ -275,8 +275,9 @@ const Hero = () => (
         opacity:0, animation:"hUp .9s ease .9s forwards"
       }}>
         {[
-          { label:"Ver horarios", id:"nosotros", primary:true },
-          { label:"Cómo llegar",  id:"contacto", primary:false },
+          { label:"Ver horarios",       id:"nosotros", primary:true  },
+          { label:"Grupos pequeños",    id:"grupos",   primary:false },
+          { label:"Cómo llegar",        id:"contacto", primary:false },
         ].map(({ label, id, primary }) => (
           <button key={id}
             onClick={() => document.getElementById(id)?.scrollIntoView({ behavior:"smooth" })}
