@@ -966,7 +966,7 @@ const GruposPequenos = () => {
             fontFamily: FONTS.body, fontWeight: 300, fontSize: ".95rem",
             color: C.dim, maxWidth: "480px", margin: 0
           }}>
-            La fe en comunidad, cerca de donde vivís. Encontrá tu grupo y unite.
+            Un grupo pequeño es una reunión en casas o espacios tranquilos donde compartimos charlas sobre la vida y la fe, leemos la Biblia, oramos y nos acompañamos mutuamente. Es un lugar cálido para conocer personas, hacer preguntas y crecer juntos, sin importar que tanto sabes.
           </p>
         </div></Reveal>
 

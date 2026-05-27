@@ -43,12 +43,21 @@ export const NEWS = [
         desc: "Estamos explorando juntos qué significa ser iglesia en el mundo. Una serie para entender el llamado que tenemos como comunidad.",
         link: "https://www.youtube.com/@iglesiaredime",
     },
+    {
+        tag: "Anuncio",
+        date: "",
+        title: "[Próximo anuncio]",
+        desc: "Actualizá este espacio desde el archivo data.js cuando haya un nuevo anuncio.",
+        link: "#",
+    },
 ];
 
 // ── Calendario de eventos ──────────────────────────────────────────────────────
 // Formato de fecha recomendado: "DD Mes" (ej: "31 Mayo")
 export const EVENTOS = [
-    { fecha: "Junio", dia: "Por definir", titulo: "Especial de jovenes", lugar: "Por confirmar" },
+    { fecha: "31 Mayo", dia: "Sábado", titulo: "Cena de jóvenes", lugar: "Por confirmar" },
+    { fecha: "7 Junio", dia: "Domingo", titulo: "Bautismos", lugar: "Hotel ACA · 11:00 hs" },
+    { fecha: "14 Junio", dia: "Sábado", titulo: "Reunión de líderes", lugar: "Por confirmar" },
     { fecha: "14 Nov", dia: "Viernes", titulo: "Retiro — ida", lugar: "Posada La Campiña" },
     { fecha: "15 Nov", dia: "Sábado", titulo: "Retiro — vuelta", lugar: "Posada La Campiña" },
 ];
@@ -90,25 +99,25 @@ export const SERMONS = [
     {
         tag: "Destacada",
         videoId: "FjZefjyjKqI",
-        title: "El hijo pródigo",
-        speaker: "Manuel Carbonell",
-        date: "",
-        desc: "Una mirada profunda a la parábola del hijo pródigo y la gracia del Padre que sale a recibirnos.",
+        title: "[Título de la predicación]",
+        speaker: "[Pastor]",
+        date: "[Fecha]",
+        desc: "Ingresá al canal para acceder a la prédica más reciente de la iglesia.",
     },
     {
         tag: "Serie en curso",
-        videoId: "ntTTOKy1CzY",
-        title: "La Misión de la Iglesia",
-        speaker: "Manuel Carbonell",
-        date: "",
-        desc: "Estamos explorando juntos qué significa ser iglesia en el mundo y el llamado que tenemos como comunidad.",
+        videoId: "frPh7FerSpM",
+        title: "[Título de la serie]",
+        speaker: "[Pastor]",
+        date: "[Fecha]",
+        desc: "Enseñanza bíblica fiel y accesible para toda la familia.",
     },
     {
         tag: "Culto especial",
         videoId: "LK88sH6KBcs",
-        title: "Jeremías 17",
-        speaker: "Santiago Benavides",
-        date: "",
+        title: "[Culto especial]",
+        speaker: "[Invitado / Pastor]",
+        date: "[Fecha]",
         desc: "Momentos especiales guardados para la edificación de la comunidad.",
     },
 ];
@@ -120,12 +129,13 @@ export const TEAM = [
     { name: "Manuel Carbonell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
     { name: "Cristian Gansslen", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
     { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
+    { name: "Marcelo Michell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" },
 ];
 
 // ── Testimonios ───────────────────────────────────────────────────────────────
 // Reemplazá por testimonios reales de miembros (con su permiso).
 export const TESTIMONIOS = [
-    { quote: "No queria saber nada sobre Dios. Me demostraron que me estaba perdiendo lo mejor de la vida.", name: "Mateo F.", role: "Primera visita en 2022" },
+    { quote: "Encontré comunidad cuando estaba completamente solo. Esta iglesia se convirtió en mi familia.", name: "Rodrigo M.", role: "Miembro desde 2022" },
     { quote: "Lo que más me sorprendió fue la calidez. Vine una vez y no pude dejar de volver.", name: "Valentina G.", role: "Primera visita en 2023" },
     { quote: "La enseñanza bíblica acá es seria y accesible al mismo tiempo. Crecí mucho en mi fe.", name: "Sebastián R.", role: "Grupo pequeño Zona Norte" },
 ];
@@ -135,9 +145,11 @@ export const CHECKS = [
     "No hace falta vestimenta especial — venís como sos.",
     "Duración aproximada: 2 horas.",
     "Hay espacio para niños durante el culto.",
-    "Café y tiempo de comunidad después del culto.",
+    "Café y charla antes del culto.",
+    "Comunidad despues del culto — quedate a conocernos.",
     "Podés venir solo/a, te vamos a recibir con alegría.",
     "No se pide dinero ni datos personales.",
+    "Hay estacionamiento disponible en el lugar.",
 ];
 
 // ── Declaración de fe ─────────────────────────────────────────────────────────
