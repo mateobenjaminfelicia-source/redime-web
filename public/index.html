@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" translate="no" content="notranslate">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─── SEO básico ──────────────────────────────────────────────── -->
+    <title>REDIME — Comunidad de la Gracia | Iglesia Evangélica Córdoba</title>
+    <meta name="description"
+        content="Iglesia evangélica bautista en Córdoba, Argentina. Cultos los domingos a las 11:00 hs en el Hotel ACA, Cesar Carman. Conocer a Cristo, crecer en Su Palabra, vivir en comunidad." />
+    <meta name="keywords"
+        content="iglesia evangélica Córdoba, iglesia bautista Córdoba, iglesia cristiana Córdoba, REDIME, comunidad de la gracia, culto domingo Córdoba" />
+    <meta name="author" content="REDIME — Comunidad de la Gracia" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://redimecomunidad.vercel.app" />
+
+    <!-- ─── Open Graph (Facebook, Instagram, WhatsApp) ─────────────── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://redimecomunidad.vercel.app" />
+    <meta property="og:title" content="REDIME — Comunidad de la Gracia" />
+    <meta property="og:description"
+        content="Iglesia evangélica bautista en Córdoba. Domingos 11:00 hs · Hotel ACA, Cesar Carman." />
+    <meta property="og:image" content="https://redimecomunidad.vercel.app/og-image.jpg" />
+    <!-- og:image debe ser 1200×630px. Colocá una foto real de la congregación en /public/og-image.jpg -->
+
+    <!-- ─── Twitter / X Card ────────────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="REDIME — Comunidad de la Gracia" />
+    <meta name="twitter:description" content="Iglesia evangélica bautista en Córdoba. Domingos 11:00 hs." />
+    <meta name="twitter:image" content="https://redimecomunidad.vercel.app/og-image.jpg" />
+
+    <!-- ─── Tema del navegador (barra de Android/iOS) ───────────────── -->
+    <meta name="theme-color" content="#050e16" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="REDIME" />
+    <!-- Evita que el navegador aplique su propio filtro de modo oscuro.
+         El sitio tiene su propio toggle claro/oscuro. -->
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- ─── Favicon ─────────────────────────────────────────────────── -->
+    <!-- Colocá el logo en /public/logo.png y las versiones de favicon en /public/ -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- ─── Tipografías ──────────────────────────────────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700;800&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+        rel="stylesheet" />
+
+    <!-- ─── JSON-LD: datos estructurados para Google ─────────────────── -->
+    <!--
+      Esto le dice a Google exactamente qué es este sitio.
+      Cuando alguien busca "iglesia Córdoba", Google puede mostrar
+      el horario y la dirección directamente en el resultado.
+      
+      IMPORTANTE: Actualizá la dirección y el teléfono cuando los tengan.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Church",
+      "name": "REDIME — Comunidad de la Gracia",
+      "alternateName": "Iglesia REDIME Córdoba",
+      "description": "Iglesia evangélica bautista en Córdoba, Argentina. Centrada en Cristo, la gracia y la enseñanza bíblica.",
+      "url": "https://redimecomunidad.vercel.app",
+      "logo": "https://redimecomunidad.vercel.app/logo.png",
+      "image": "https://redimecomunidad.vercel.app/og-image.jpg",
+      "telephone": "",
+      "email": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cesar Carman",
+        "addressLocality": "Córdoba",
+        "addressRegion": "Córdoba",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -31.4135,
+        "longitude": -64.1811
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "11:00",
+          "closes": "12:30"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/redimecomunidaddelagracia",
+        "https://www.youtube.com/@iglesiaredime"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
