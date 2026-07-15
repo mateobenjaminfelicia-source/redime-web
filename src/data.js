@@ -9,13 +9,13 @@
 // ── Información general ───────────────────────────────────────────────────────
 export const INFO = {
     nombre: "REDIME — Comunidad de la Gracia",
-    direccion: "Hotel ACA, Cesar Carman",
+    direccion: "Ibarbálz 1050",
     ciudad: "Córdoba, Argentina",
     horario: "Domingos · 11:00 hs",
     instagram: "https://www.instagram.com/redimecomunidaddelagracia",
     youtube: "https://www.youtube.com/@iglesiaredime",
     whatsapp: "",  // ej: "https://wa.me/5493510000000"
-    mapsUrl: "https://maps.google.com/?q=Hotel+ACA+Cesar+Carman+Córdoba+Argentina",
+    mapsUrl: "https://maps.app.goo.gl/3S7BNB2QemAkAdUz5?g_st=aw",
     email: "",  // email para recibir pedidos de oración (FormSubmit)
 };
 
@@ -30,6 +30,13 @@ export const VERSICULO = {
 // Tags disponibles: "Evento" | "Anuncio" | "Serie" | "Retiro" | "Comunidad"
 export const NEWS = [
     {
+        tag: "Comunidad",
+        date: "Esta semana",
+        title: "🏠 Nuevo lugar en Ibarbálz",
+        desc: "Empezamos a acondicionar nuestro salón nuevo. Mirá la lista de necesidades por área y donate lo que puedas, o coordiná por WhatsApp al 351-3714415.",
+        link: "https://redime-ibarbalz.netlify.app",
+    },
+    {
         tag: "Retiro",
         date: "14 y 15 de noviembre",
         title: "Retiro de la iglesia",
@@ -39,25 +46,25 @@ export const NEWS = [
     {
         tag: "Serie",
         date: "Domingos · 11:00 hs",
-        title: "La misión de la iglesia",
-        desc: "Estamos explorando juntos qué significa ser iglesia en el mundo. Una serie para entender el llamado que tenemos como comunidad.",
+        title: "Encuentros con Jesús",
+        desc: "Estamos explorando los encuentro de Jesús. Una serie para entender cómo nos invita a acercarnos a Él y a vivir en Su gracia.",
         link: "https://www.youtube.com/@iglesiaredime",
     },
-    {
-        tag: "Anuncio",
-        date: "",
-        title: "[Próximo anuncio]",
-        desc: "Actualizá este espacio desde el archivo data.js cuando haya un nuevo anuncio.",
-        link: "#",
-    },
+    // {
+    //     tag: "Anuncio",
+    //     date: "",
+    //     title: "[Próximo anuncio]",
+    //     desc: "Actualizá este espacio desde el archivo data.js cuando haya un nuevo anuncio.",
+    //     link: "#",
+    // },
 ];
 
 // ── Calendario de eventos ──────────────────────────────────────────────────────
 // Formato de fecha recomendado: "DD Mes" (ej: "31 Mayo")
 export const EVENTOS = [
-    { fecha: "31 Mayo", dia: "Sábado", titulo: "Cena de jóvenes", lugar: "Por confirmar" },
-    { fecha: "7 Junio", dia: "Domingo", titulo: "Bautismos", lugar: "Hotel ACA · 11:00 hs" },
-    { fecha: "14 Junio", dia: "Sábado", titulo: "Reunión de líderes", lugar: "Por confirmar" },
+    // { fecha: "31 Mayo", dia: "Sábado", titulo: "Cena de jóvenes", lugar: "Por confirmar" },
+    // { fecha: "7 Junio", dia: "Domingo", titulo: "Bautismos", lugar: "Hotel ACA · 11:00 hs" },
+    { fecha: "19 Jul", dia: "Todos los domingos", titulo: "Reunión general", lugar: "Ibarbálz 1050" },
     { fecha: "14 Nov", dia: "Viernes", titulo: "Retiro — ida", lugar: "Posada La Campiña" },
     { fecha: "15 Nov", dia: "Sábado", titulo: "Retiro — vuelta", lugar: "Posada La Campiña" },
 ];
@@ -99,26 +106,26 @@ export const SERMONS = [
     {
         tag: "Destacada",
         videoId: "FjZefjyjKqI",
-        title: "[Título de la predicación]",
-        speaker: "[Pastor]",
-        date: "[Fecha]",
+        title: "El hijo prodigo — Lucas 15:11-32",
+        speaker: "Pastor Manuel Carbonell",
+        date: "19 de enero de 2026",
         desc: "Ingresá al canal para acceder a la prédica más reciente de la iglesia.",
     },
     {
         tag: "Serie en curso",
-        videoId: "frPh7FerSpM",
-        title: "[Título de la serie]",
-        speaker: "[Pastor]",
-        date: "[Fecha]",
-        desc: "Enseñanza bíblica fiel y accesible para toda la familia.",
+        videoId: "Lw6tsIOmA58",
+        title: "¿Una pregunta obvia? - Juan 5:1 al 14",
+        speaker: "Marcelo Michel",
+        date: "19 de enero de 2026",
+        desc: "Encuentro de Jesús con un hombre enfermo en el estanque de Betesda. ¿Qué nos enseña sobre la fe y la sanidad?",
     },
     {
         tag: "Culto especial",
         videoId: "LK88sH6KBcs",
-        title: "[Culto especial]",
-        speaker: "[Invitado / Pastor]",
-        date: "[Fecha]",
-        desc: "Momentos especiales guardados para la edificación de la comunidad.",
+        title: "Jeremías 17",
+        speaker: "Santiago Benavides",
+        date: "27 de enero de 2025",
+        desc: "Nuestra vida y carácter dependen de dónde depositamos nuestra confianza: si en nosotros mismos, o en el Señor",
     },
 ];
 
@@ -126,10 +133,10 @@ export const SERMONS = [
 // Reemplazá los img: por rutas locales cuando tengan fotos reales.
 // Ej: img: "/equipo/manuel.jpg"  (el archivo va en /public/equipo/)
 export const TEAM = [
-    { name: "Manuel Carbonell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
-    { name: "Cristian Gansslen", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
-    { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
-    { name: "Marcelo Michell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" },
+    { name: "Manuel Carbonell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "" },
+    { name: "Cristian Gansslen", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "" },
+    { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "" },
+    // { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
 ];
 
 // ── Testimonios ───────────────────────────────────────────────────────────────
