@@ -135,7 +135,7 @@ export const SERMONS = [
 export const TEAM = [
     { name: "Manuel Carbonell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "/equipo/manuel.jpeg" },
     { name: "Cristian Gansslen", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "/equipo/cristian.jpeg" },
-    { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "/equipo/eduardo.jpeg" },
+    { name: "Eduardo Kardahi", role: "Anciano", desc: "Soy Anciano en REDIME. Ayudo en la organización y en la enseñanza de la Palabra de Dios.", img: "/equipo/eduardo.jpeg" },
     // { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
 ];
 
