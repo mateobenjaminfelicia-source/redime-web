@@ -133,16 +133,16 @@ export const SERMONS = [
 // Reemplazá los img: por rutas locales cuando tengan fotos reales.
 // Ej: img: "/equipo/manuel.jpg"  (el archivo va en /public/equipo/)
 export const TEAM = [
-    { name: "Manuel Carbonell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "" },
-    { name: "Cristian Gansslen", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "" },
-    { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "" },
+    { name: "Manuel Carbonell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "/equipo/manuel.jpeg" },
+    { name: "Cristian Gansslen", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "/equipo/cristian.jpeg" },
+    { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "/equipo/eduardo.jpeg" },
     // { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
 ];
 
 // ── Testimonios ───────────────────────────────────────────────────────────────
 // Reemplazá por testimonios reales de miembros (con su permiso).
 export const TESTIMONIOS = [
-    { quote: "Encontré comunidad cuando estaba completamente solo. Esta iglesia se convirtió en mi familia.", name: "Rodrigo M.", role: "Miembro desde 2022" },
+    { quote: "Redime, mas que una comunidad, es una familia. Asi es como lo sentí desde que viné por primera vez.", name: "Paul M.", role: "Primera visita en 2024" },
     { quote: "Lo que más me sorprendió fue la calidez. Vine una vez y no pude dejar de volver.", name: "Valentina G.", role: "Primera visita en 2023" },
     { quote: "La enseñanza bíblica acá es seria y accesible al mismo tiempo. Crecí mucho en mi fe.", name: "Sebastián R.", role: "Grupo pequeño Zona Norte" },
 ];
