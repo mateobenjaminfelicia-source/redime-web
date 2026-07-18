@@ -143,7 +143,7 @@ export const TEAM = [
 // Reemplazá por testimonios reales de miembros (con su permiso).
 export const TESTIMONIOS = [
     { quote: "Redime, mas que una comunidad, es una familia. Asi es como lo sentí desde que viné por primera vez.", name: "Paul M.", role: "Primera visita en 2024" },
-    { quote: "Lo que más me sorprendió fue la calidez. Vine una vez y no pude dejar de volver.", name: "Valentina G.", role: "Primera visita en 2023" },
+    { quote: "Lo que más valoramos de Redime es que el evangelio se vive en comunidad. Los grupos pequeños y la comunión con los hermanos nos han ayudado a crecer como matrimonio, como padres y como discípulos de Cristo.", name: "Ezequiel G.", role: "Primera visita en 2023" },
     { quote: "La enseñanza bíblica acá es seria y accesible al mismo tiempo. Crecí mucho en mi fe.", name: "Sebastián R.", role: "Grupo pequeño Zona Norte" },
 ];
 
