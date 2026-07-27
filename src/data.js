@@ -144,7 +144,7 @@ export const TEAM = [
 export const TESTIMONIOS = [
     { quote: "Redime, mas que una comunidad, es una familia. Asi es como lo sentí desde que viné por primera vez.", name: "Paul M.", role: "Primera visita en 2024" },
     { quote: "Lo que más valoramos de Redime es que el evangelio se vive en comunidad. Los grupos pequeños y la comunión con los hermanos nos han ayudado a crecer como matrimonio, como padres y como discípulos de Cristo.", name: "Ezequiel G.", role: "Primera visita en 2023" },
-    { quote: "La enseñanza bíblica acá es seria y accesible al mismo tiempo. Crecí mucho en mi fe.", name: "Sebastián R.", role: "Grupo pequeño Zona Norte" },
+    { quote: "Llegamos a la iglesia en diciembre de 2024 y, desde el primer momento, nos sentimos muy bien recibidos. Encontramos una comunidad cálida, con familias muy amables y dispuestas a compartir la fe con alegría. Uno de los mayores regalos para nosotros fue ver que nuestro hijo puede crecer rodeado de niños de su edad, formando amistades con los mismos valores y aprendiendo juntos a seguir a Jesús. Estamos muy agradecidos de ser parte de esta hermosa familia en la fe. ", name: "Familia Cativiela", role: "Grupo pequeño URCA" },
 ];
 
 // ── Lo que esperás si visitás por primera vez ──────────────────────────────────
@@ -155,7 +155,7 @@ export const CHECKS = [
     "Café y charla antes del culto.",
     "Comunidad despues del culto — quedate a conocernos.",
     "Podés venir solo/a, te vamos a recibir con alegría.",
-    "No se pide dinero ni datos personales.",
+    "No se pide dinero",
     "Hay estacionamiento disponible en el lugar.",
 ];
 
