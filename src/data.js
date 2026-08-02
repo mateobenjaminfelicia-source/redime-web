@@ -64,7 +64,7 @@ export const NEWS = [
 export const EVENTOS = [
     // { fecha: "31 Mayo", dia: "Sábado", titulo: "Cena de jóvenes", lugar: "Por confirmar" },
     // { fecha: "7 Junio", dia: "Domingo", titulo: "Bautismos", lugar: "Hotel ACA · 11:00 hs" },
-    { fecha: "19 Jul", dia: "Todos los domingos", titulo: "Reunión general", lugar: "Ibarbálz 1050" },
+    { fecha: "Cada Domingo", dia: "11 hs", titulo: "Reunión general", lugar: "Ibarbálz 1050" },
     { fecha: "14 Nov", dia: "Viernes", titulo: "Retiro — ida", lugar: "Posada La Campiña" },
     { fecha: "15 Nov", dia: "Sábado", titulo: "Retiro — vuelta", lugar: "Posada La Campiña" },
 ];
@@ -113,11 +113,11 @@ export const SERMONS = [
     },
     {
         tag: "Serie en curso",
-        videoId: "Lw6tsIOmA58",
-        title: "¿Una pregunta obvia? - Juan 5:1 al 14",
-        speaker: "Marcelo Michel",
-        date: "19 de enero de 2026",
-        desc: "Encuentro de Jesús con un hombre enfermo en el estanque de Betesda. ¿Qué nos enseña sobre la fe y la sanidad?",
+        videoId: "yrP-LTjv7po",
+        title: "Encuentros con Jesús",
+        speaker: "Manuel Carbonell",
+        date: "26 de Julio de 2026",
+        desc: " Creer o no creer esa es la cuestión - Juan 20:24 al 31",
     },
     {
         tag: "Culto especial",
@@ -133,7 +133,7 @@ export const SERMONS = [
 // Reemplazá los img: por rutas locales cuando tengan fotos reales.
 // Ej: img: "/equipo/manuel.jpg"  (el archivo va en /public/equipo/)
 export const TEAM = [
-    { name: "Manuel Carbonell", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "/equipo/manuel.jpeg" },
+    { name: "Manuel Carbonell", role: "Anciano", desc: "Padre, papá de 4, seguidor de Jesús.", img: "/equipo/manu.png" },
     { name: "Cristian Gansslen", role: "Anciano", desc: "Enseño a guardar todo lo que Jesús nos enseñó.", img: "/equipo/cristian.PNG" },
     { name: "Eduardo Kardahi", role: "Anciano", desc: "Ayudo en la organización y en la enseñanza de la Palabra de Dios.", img: "/equipo/eduardo.jpeg" },
     // { name: "Eduardo Kardahi", role: "Anciano", desc: "Comprometido con la fidelidad a las Escrituras y el amor a la congregación.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
