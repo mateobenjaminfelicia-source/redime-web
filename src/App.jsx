@@ -623,45 +623,6 @@ const MissionVision = () => {
           <Reveal delay={.1}>
             <div style={{
               position: "relative", overflow: "hidden",
-              background: C.teal, border: `1px solid ${C.tealLight}30`,
-              borderRadius: "16px", padding: "2.5rem", minHeight: "300px"
-            }}>
-              <div style={{
-                position: "absolute", top: "-50px", right: "-50px", width: "180px", height: "180px",
-                borderRadius: "50%", background: `radial-gradient(circle,#fff1,transparent 70%)`
-              }} />
-              <div style={{
-                position: "absolute", bottom: "-40px", left: "-40px", width: "140px", height: "140px",
-                borderRadius: "50%", background: `radial-gradient(circle,${C.orange}20,transparent 70%)`
-              }} />
-              <div style={{
-                fontFamily: FONTS.ui, fontWeight: 600, fontSize: ".68rem",
-                letterSpacing: ".22em", textTransform: "uppercase", color: C.tealLight, marginBottom: "1.2rem",
-                filter: "brightness(1.8)"
-              }}>Misión</div>
-              <h3 style={{
-                fontFamily: FONTS.title, fontWeight: 600, fontSize: "1.8rem",
-                color: "#fff", marginBottom: "1.4rem", lineHeight: 1.2
-              }}>¿Por qué existimos?</h3>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: ".8rem" }}>
-                {["Conectar a las personas con Dios y con los demás.",
-                  "Crecer en el conocimiento de Su Palabra.",
-                  "Compartir la buena noticia de Jesucristo viviendo en comunidad."
-                ].map(t => (
-                  <li key={t} style={{
-                    display: "flex", gap: ".75rem", alignItems: "flex-start",
-                    fontFamily: FONTS.body, fontWeight: 300, fontSize: ".92rem",
-                    color: "rgba(255,255,255,.85)", lineHeight: 1.55
-                  }}>
-                    <span style={{ color: C.tealLight, filter: "brightness(1.6)", marginTop: "1px", flexShrink: 0, fontWeight: 700 }}>—</span>{t}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-          <Reveal delay={.22}>
-            <div style={{
-              position: "relative", overflow: "hidden",
               background: C.s2, border: `1px solid ${C.border}`,
               borderRadius: "16px", padding: "2.5rem", minHeight: "300px",
               display: "flex", flexDirection: "column", justifyContent: "space-between",
@@ -683,12 +644,55 @@ const MissionVision = () => {
                 }}>¿Hacia dónde vamos?</h3>
               </div>
               <blockquote style={{
-                fontFamily: FONTS.title, fontStyle: "italic", fontSize: "1.35rem",
+                fontFamily: FONTS.title, fontStyle: "italic", fontSize: "1.25rem",
                 color: C.text, lineHeight: 1.6, borderLeft: `3px solid ${C.orange}`,
                 paddingLeft: "1.25rem", margin: 0
               }}>
-                "Ser una iglesia unida que conoce profundamente a Cristo, crece a Su imagen y se edifica en amor."
+                Nuestra meta es llegar a ser una iglesia unida que <strong style={{ fontStyle: "normal" }}>CONOCE</strong> profundamente
+                a Cristo, <strong style={{ fontStyle: "normal" }}>CRECE</strong> a su imagen y se{" "}
+                <strong style={{ fontStyle: "normal" }}>EDIFICA</strong> en amor, donde cada miembro aporta y cumple su propósito.
               </blockquote>
+            </div>
+          </Reveal>
+          <Reveal delay={.22}>
+            <div style={{
+              position: "relative", overflow: "hidden",
+              background: C.teal, border: `1px solid ${C.tealLight}30`,
+              borderRadius: "16px", padding: "2.5rem", minHeight: "300px"
+            }}>
+              <div style={{
+                position: "absolute", top: "-50px", right: "-50px", width: "180px", height: "180px",
+                borderRadius: "50%", background: `radial-gradient(circle,#fff1,transparent 70%)`
+              }} />
+              <div style={{
+                position: "absolute", bottom: "-40px", left: "-40px", width: "140px", height: "140px",
+                borderRadius: "50%", background: `radial-gradient(circle,${C.orange}20,transparent 70%)`
+              }} />
+              <div style={{
+                fontFamily: FONTS.ui, fontWeight: 600, fontSize: ".68rem",
+                letterSpacing: ".22em", textTransform: "uppercase", color: C.tealLight, marginBottom: "1.2rem",
+                filter: "brightness(1.8)"
+              }}>Misión</div>
+              <h3 style={{
+                fontFamily: FONTS.title, fontWeight: 600, fontSize: "1.8rem",
+                color: "#fff", marginBottom: "1.4rem", lineHeight: 1.2
+              }}>¿Para qué existimos?</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: ".8rem" }}>
+                {[
+                  { bold: "Conectar", rest: " a las personas con Dios y con los demás." },
+                  { bold: "Crecer", rest: " en el conocimiento de Su Palabra." },
+                  { bold: "Compartir", rest: " la buena noticia de Jesucristo viviendo en comunidad." },
+                ].map(({ bold, rest }) => (
+                  <li key={bold} style={{
+                    display: "flex", gap: ".75rem", alignItems: "flex-start",
+                    fontFamily: FONTS.body, fontWeight: 300, fontSize: ".92rem",
+                    color: "rgba(255,255,255,.85)", lineHeight: 1.55
+                  }}>
+                    <span style={{ color: C.tealLight, filter: "brightness(1.6)", marginTop: "1px", flexShrink: 0, fontWeight: 700 }}>—</span>
+                    <span><strong style={{ color: "#fff", fontWeight: 700 }}>{bold}</strong>{rest}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
