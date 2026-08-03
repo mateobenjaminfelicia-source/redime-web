@@ -635,6 +635,12 @@ const MissionVision = () => {
               }} />
               <div>
                 <div style={{
+                  width: "48px", height: "48px", borderRadius: "50%",
+                  background: `${C.orange}18`, border: `1px solid ${C.orange}30`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "1.35rem", marginBottom: "1.1rem"
+                }}>⛪</div>
+                <div style={{
                   fontFamily: FONTS.ui, fontWeight: 600, fontSize: ".68rem",
                   letterSpacing: ".22em", textTransform: "uppercase", color: C.tealLight, marginBottom: "1.2rem"
                 }}>Visión</div>
@@ -648,7 +654,7 @@ const MissionVision = () => {
                 color: C.text, lineHeight: 1.6, borderLeft: `3px solid ${C.orange}`,
                 paddingLeft: "1.25rem", margin: 0
               }}>
-                Nuestra meta es llegar a ser una iglesia unida que <strong style={{ fontStyle: "normal" }}>CONOCE</strong> profundamente
+                Es llegar a ser una iglesia unida que <strong style={{ fontStyle: "normal" }}>CONOCE</strong> profundamente
                 a Cristo, <strong style={{ fontStyle: "normal" }}>CRECE</strong> a su imagen y se{" "}
                 <strong style={{ fontStyle: "normal" }}>EDIFICA</strong> en amor, donde cada miembro aporta y cumple su propósito.
               </blockquote>
@@ -676,19 +682,24 @@ const MissionVision = () => {
               <h3 style={{
                 fontFamily: FONTS.title, fontWeight: 600, fontSize: "1.8rem",
                 color: "#fff", marginBottom: "1.4rem", lineHeight: 1.2
-              }}>¿Para qué existimos?</h3>
+              }}>¿Por qué existimos?</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: ".8rem" }}>
                 {[
-                  { bold: "Conectar", rest: " a las personas con Dios y con los demás." },
-                  { bold: "Crecer", rest: " en el conocimiento de Su Palabra." },
-                  { bold: "Compartir", rest: " la buena noticia de Jesucristo viviendo en comunidad." },
-                ].map(({ bold, rest }) => (
+                  { icon: "🤝", bold: "Conectar", rest: " a las personas con Dios y con los demás." },
+                  { icon: "📖", bold: "Crecer", rest: " en el conocimiento de Su Palabra." },
+                  { icon: "🐟", bold: "Compartir", rest: " la buena noticia de Jesucristo viviendo en comunidad." },
+                ].map(({ icon, bold, rest }) => (
                   <li key={bold} style={{
-                    display: "flex", gap: ".75rem", alignItems: "flex-start",
+                    display: "flex", gap: ".9rem", alignItems: "center",
                     fontFamily: FONTS.body, fontWeight: 300, fontSize: ".92rem",
                     color: "rgba(255,255,255,.85)", lineHeight: 1.55
                   }}>
-                    <span style={{ color: C.tealLight, filter: "brightness(1.6)", marginTop: "1px", flexShrink: 0, fontWeight: 700 }}>—</span>
+                    <span style={{
+                      width: "40px", height: "40px", borderRadius: "50%",
+                      background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.16)",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      fontSize: "1.05rem", flexShrink: 0
+                    }}>{icon}</span>
                     <span><strong style={{ color: "#fff", fontWeight: 700 }}>{bold}</strong>{rest}</span>
                   </li>
                 ))}

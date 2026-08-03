@@ -84,6 +84,7 @@ export const MINS = [
 export const GROUPS = [
     { day: "Martes", tipo: "Mujeres", leader: "Marcela Messa Kardahi", barrio: "Bº Palmas de Claret", address: "Cruz Chica 4685", time: "8:30 hs", contact: "351-3664230" },
     { day: "Miércoles", tipo: "Mixto", leader: "Cristian Gansslen", barrio: "Bº Altos de Manantiales", address: "Lote 4 Mna 29", time: "19:00 a 20:30 hs", contact: "351-6171229" },
+    { day: "Miércoles", tipo: "Mixto", leader: "Silvia Carbonell", barrio: "Bº Pueyrredón", address: "Padre Luis Monti 1558", time: "17:00 hs", contact: "351-5196541" },
     { day: "Jueves", tipo: "Mixto", leader: "Ezequiel Grimi", barrio: "Bº San Vicente", address: "Entre Ríos 2116", time: "20:00 hs", contact: "11-78997206" },
     { day: "Jueves", tipo: "Mixto", leader: "Sebastián Cabral", barrio: "Bº Centro América", address: "Sofía Bozan 2833", time: "20:15 hs", contact: "351-2089981" },
     { day: "Jueves", tipo: "Jóvenes", leader: "Marcelo y Verónica Michell", barrio: "Bº San Fernando", address: "Pje. Carlos del Signo 360", time: "19:00 hs", contact: "351-8170687" },
