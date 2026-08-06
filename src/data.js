@@ -65,8 +65,8 @@ export const EVENTOS = [
     // { fecha: "31 Mayo", dia: "Sábado", titulo: "Cena de jóvenes", lugar: "Por confirmar" },
     // { fecha: "7 Junio", dia: "Domingo", titulo: "Bautismos", lugar: "Hotel ACA · 11:00 hs" },
     { fecha: "Cada Domingo", dia: "11 hs", titulo: "Reunión general", lugar: "Ibarbálz 1050" },
-    { fecha: "14 Nov", dia: "Viernes", titulo: "Retiro — ida", lugar: "Posada La Campiña" },
-    { fecha: "15 Nov", dia: "Sábado", titulo: "Retiro — vuelta", lugar: "Posada La Campiña" },
+    { fecha: "7 Nov", dia: "Viernes", titulo: "Retiro — ida", lugar: "Posada La Campiña" },
+    { fecha: "8 Nov", dia: "Sábado", titulo: "Retiro — vuelta", lugar: "Posada La Campiña" },
 ];
 
 // ── Ministerios ───────────────────────────────────────────────────────────────
