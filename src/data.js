@@ -43,11 +43,11 @@ export const NEWS = [
         desc: "Nos vamos juntos a Posada La Campiña. Dos días para descansar, compartir y crecer en comunidad. ¡Anotate y no te lo perdas!",
         link: "#",
     },
-    {
+{
         tag: "Serie",
         date: "Domingos · 11:00 hs",
         title: "Los 10 mandamientos",
-        desc: "Estamos explorando los 10 mandamientos. Una serie para entender la justicia de Dios y como quiere que vivamos",
+        desc: "Estamos explorando los 10 mandamientos. Una serie para entender la justicia de Dios y como quiere que vivimos.",
         link: "https://www.youtube.com/@iglesiaredime",
     },
     // {
@@ -117,7 +117,7 @@ export const SERMONS = [
         title: "Segundo mandamiento",
         speaker: "Marcelo Michell",
         date: "24 de Septiembre de 2026",
-        desc: " No te harás imagen - Éxodo 20:4-6",
+        desc: "No te harás imagen - Éxodo 20:4-6.",
     },
     {
         tag: "Culto especial",
@@ -125,7 +125,7 @@ export const SERMONS = [
         title: "Jeremías 17",
         speaker: "Santiago Benavides",
         date: "27 de enero de 2025",
-        desc: "Nuestra vida y carácter dependen de dónde depositamos nuestra confianza: si en nosotros mismos, o en el Señor",
+        desc: "Nuestra vida y carácter dependen de dónde depositamos nuestra confianza: si en nosotros mismos, o en el Señor.",
     },
 ];
 

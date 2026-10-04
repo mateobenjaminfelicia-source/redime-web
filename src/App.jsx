@@ -674,11 +674,19 @@ const MissionVision = () => {
                 position: "absolute", bottom: "-40px", left: "-40px", width: "140px", height: "140px",
                 borderRadius: "50%", background: `radial-gradient(circle,${C.orange}20,transparent 70%)`
               }} />
-              <div style={{
-                fontFamily: FONTS.ui, fontWeight: 600, fontSize: ".68rem",
-                letterSpacing: ".22em", textTransform: "uppercase", color: C.tealLight, marginBottom: "1.2rem",
-                filter: "brightness(1.8)"
-              }}>Misión</div>
+              <div>
+                <div style={{
+                  width: "48px", height: "48px", borderRadius: "50%",
+                  background: `rgba(255,255,255,.1)`, border: `1px solid rgba(255,255,255,.2)`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "1.35rem", marginBottom: "1.1rem"
+                }}>🎯</div>
+                <div style={{
+                  fontFamily: FONTS.ui, fontWeight: 600, fontSize: ".68rem",
+                  letterSpacing: ".22em", textTransform: "uppercase", color: C.tealLight, marginBottom: "1.2rem",
+                  filter: "brightness(1.8)"
+                }}>Misión</div>
+              </div>
               <h3 style={{
                 fontFamily: FONTS.title, fontWeight: 600, fontSize: "1.8rem",
                 color: "#fff", marginBottom: "1.4rem", lineHeight: 1.2
@@ -1247,6 +1255,10 @@ const Predicaciones = () => {
                         fontFamily: FONTS.title, fontWeight: 600, fontSize: "1.15rem",
                         color: C.text, margin: 0, lineHeight: 1.25
                       }}>{s.title}</h4>
+                      <p style={{
+                        fontFamily: FONTS.body, fontWeight: 300, fontSize: ".8rem",
+                        color: C.dim, lineHeight: 1.5, margin: 0, flex: 1
+                      }}>{s.desc}</p>
                       <div style={{
                         fontFamily: FONTS.ui, fontWeight: 700, fontSize: ".67rem",
                         letterSpacing: ".1em", textTransform: "uppercase",
