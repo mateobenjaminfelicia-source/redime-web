@@ -1401,7 +1401,7 @@ const Contacto = () => {
               border: `1px solid ${C.border}`, minHeight: "360px"
             }}>
               <iframe title="Ubicación REDIME Córdoba"
-                src="https://www.google.com/maps?q=Ibarb%C3%A1lz+1050,+C%C3%B3rdoba,+Argentina&output=embed"
+                src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1sIbarbalz+1052,+C%C3%B3rdoba,+Argentina"
                 width="100%" height="100%" loading="lazy"
                 style={{
                   border: "none", minHeight: "360px", display: "block",

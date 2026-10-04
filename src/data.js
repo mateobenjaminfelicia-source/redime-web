@@ -9,13 +9,13 @@
 // ── Información general ───────────────────────────────────────────────────────
 export const INFO = {
     nombre: "REDIME — Comunidad de la Gracia",
-    direccion: "Ibarbálz 1050",
+    direccion: "Ibarbalz 1052",
     ciudad: "Córdoba, Argentina",
     horario: "Domingos · 11:00 hs",
     instagram: "https://www.instagram.com/redimecomunidaddelagracia",
     youtube: "https://www.youtube.com/@iglesiaredime",
     whatsapp: "",  // ej: "https://wa.me/5493510000000"
-    mapsUrl: "https://maps.app.goo.gl/3S7BNB2QemAkAdUz5?g_st=aw",
+    mapsUrl: "https://maps.app.goo.gl/?q=Ibarbalz+1052,+C%C3%B3rdoba,+Argentina",
     email: "",  // email para recibir pedidos de oración (FormSubmit)
 };
 
@@ -32,7 +32,7 @@ export const NEWS = [
     {
         tag: "Comunidad",
         date: "Esta semana",
-        title: "🏠 Nuevo lugar en Ibarbálz",
+        title: "🏠 Nuevo lugar en Ibarbalz",
         desc: "Empezamos a acondicionar nuestro salón nuevo. Mirá la lista de necesidades por área y donate lo que puedas, o coordiná por WhatsApp al 351-3714415.",
         link: "https://redime-ibarbalz.netlify.app",
     },
@@ -46,8 +46,8 @@ export const NEWS = [
     {
         tag: "Serie",
         date: "Domingos · 11:00 hs",
-        title: "Encuentros con Jesús",
-        desc: "Estamos explorando los encuentro de Jesús. Una serie para entender cómo nos invita a acercarnos a Él y a vivir en Su gracia.",
+        title: "Los 10 mandamientos",
+        desc: "Estamos explorando los 10 mandamientos. Una serie para entender la justicia de Dios y como quiere que vivamos",
         link: "https://www.youtube.com/@iglesiaredime",
     },
     // {
@@ -64,7 +64,7 @@ export const NEWS = [
 export const EVENTOS = [
     // { fecha: "31 Mayo", dia: "Sábado", titulo: "Cena de jóvenes", lugar: "Por confirmar" },
     // { fecha: "7 Junio", dia: "Domingo", titulo: "Bautismos", lugar: "Hotel ACA · 11:00 hs" },
-    { fecha: "Cada Domingo", dia: "11 hs", titulo: "Reunión general", lugar: "Ibarbálz 1050" },
+    { fecha: "Cada Domingo", dia: "11 hs", titulo: "Reunión general", lugar: "Ibarbalz 1052" },
     { fecha: "7 Nov", dia: "Viernes", titulo: "Retiro — ida", lugar: "Posada La Campiña" },
     { fecha: "8 Nov", dia: "Sábado", titulo: "Retiro — vuelta", lugar: "Posada La Campiña" },
 ];
@@ -77,18 +77,17 @@ export const MINS = [
     { icon: "⭐", title: "Niños", desc: "Educación bíblica creativa y segura para los más pequeños de la familia." },
     { icon: "📖", title: "Escuela Bíblica", desc: "Estudio profundo y sistemático de las Escrituras para toda la iglesia." },
     { icon: "🏠", title: "Grupos Pequeños", desc: "Comunidades por zonas donde la fe se vive y comparte en lo cotidiano." },
-    { icon: "🕊️", title: "Ministerio de Rahab", desc: "Un espacio de gracia, restauración y esperanza para mujeres en situación de vulnerabilidad." },
+    { icon: "🕊️", title: "Ministerio Casa Abigail", desc: "Un espacio de gracia, restauración y esperanza para mujeres con niños que sufren violencia familiar." },
 ];
 
 // ── Grupos pequeños ───────────────────────────────────────────────────────────
 export const GROUPS = [
-    { day: "Martes", tipo: "Mujeres", leader: "Marcela Messa Kardahi", barrio: "Bº Palmas de Claret", address: "Cruz Chica 4685", time: "8:30 hs", contact: "351-3664230" },
+    { day: "Martes", tipo: "Mujeres", leader: "Marcela Messa", barrio: "Bº Palmas de Claret", address: "Cruz Chica 4685", time: "8:30 hs", contact: "351-3664230" },
     { day: "Miércoles", tipo: "Mixto", leader: "Cristian Gansslen", barrio: "Bº Altos de Manantiales", address: "Lote 4 Mna 29", time: "19:00 a 20:30 hs", contact: "351-6171229" },
-    { day: "Miércoles", tipo: "Mixto", leader: "Silvia Carbonell", barrio: "Bº Pueyrredón", address: "Padre Luis Monti 1558", time: "17:00 hs", contact: "351-5196541" },
-    { day: "Jueves", tipo: "Mixto", leader: "Sebastián Cabral", barrio: "Bº Centro América", address: "Sofía Bozan 2833", time: "20:15 hs", contact: "351-2089981" },
+    { day: "Miércoles", tipo: "Mixto", leader: "Silvia Salusso", barrio: "Bº Pueyrredón", address: "Padre Luis Monti 1558", time: "17:00 hs", contact: "351-5196541" },
     { day: "Jueves", tipo: "Jóvenes", leader: "Marcelo y Verónica Michell", barrio: "Bº San Fernando", address: "Pje. Carlos del Signo 360", time: "19:00 hs", contact: "351-8170687" },
     { day: "Viernes", tipo: "Mixto", leader: "Ezequiel Grimi", barrio: "Bº San Vicente", address: "Entre Ríos 2116", time: "20:00 hs", contact: "11-78997206" },
-    { day: "Viernes", tipo: "Mixto", leader: "Manuel Carbonell", barrio: "Bº Urca", address: "Gines García 3884", time: "20:00 hs", contact: "351-3571689" },
+    { day: "Viernes", tipo: "Mixto", leader: "Eduardo Kardahi y Manuel Carbonell", barrio: "Bº Urca", address: "Gines García 3884", time: "20:00 hs", contact: "351-3571689" },
 ];
 
 // Colores por día (para las tarjetas de grupos)
@@ -114,11 +113,11 @@ export const SERMONS = [
     },
     {
         tag: "Serie en curso",
-        videoId: "yrP-LTjv7po",
-        title: "Encuentros con Jesús",
-        speaker: "Manuel Carbonell",
-        date: "26 de Julio de 2026",
-        desc: " Creer o no creer esa es la cuestión - Juan 20:24 al 31",
+        videoId: "ZK-6qBRQcTk", 
+        title: "Segundo mandamiento",
+        speaker: "Marcelo Michell",
+        date: "24 de Septiembre de 2026",
+        desc: " No te harás imagen - Éxodo 20:4-6",
     },
     {
         tag: "Culto especial",
@@ -156,8 +155,8 @@ export const CHECKS = [
     "Café y charla antes del culto.",
     "Comunidad despues del culto — quedate a conocernos.",
     "Podés venir solo/a, te vamos a recibir con alegría.",
-    "No se pide dinero",
-    "Hay estacionamiento disponible en el lugar.",
+    "No se pide dinero.",
+    "Hay estacionamiento cerca.",
 ];
 
 // ── Declaración de fe ─────────────────────────────────────────────────────────
