@@ -775,7 +775,7 @@ const Testimonios = () => {
 // ─── Novedades + Calendario ────────────────────────────────────────────────────────
 const TAG_COLORS_NEWS = { "Evento": "#e06a36", "Anuncio": "#1a7080", "Serie": "#2d8a5e", "Retiro": "#a07830", "Comunidad": "#7050b0", default: "#4a6070" };
 
-const NewsCard = ({ tag, date, title, desc, link, delay }) => {
+const NewsCard = ({ tag, date, title, desc, link, mapsUrl, delay }) => {
   const C = useC();
   const [hov, setHov] = useState(false);
   const col = TAG_COLORS_NEWS[tag] || TAG_COLORS_NEWS.default;
@@ -807,11 +807,23 @@ const NewsCard = ({ tag, date, title, desc, link, delay }) => {
             fontFamily: FONTS.body, fontWeight: 300, fontSize: ".88rem",
             color: C.dim, lineHeight: 1.6, margin: 0, flex: 1
           }}>{desc}</p>
-          <div style={{
-            fontFamily: FONTS.ui, fontWeight: 700, fontSize: ".7rem",
-            letterSpacing: ".12em", textTransform: "uppercase",
-            color: hov ? col : C.dim, transition: "color .25s"
-          }}>Ver más →</div>
+          <div style={{ display: "flex", gap: ".75rem", flexWrap: "wrap" }}>
+            <div style={{
+              fontFamily: FONTS.ui, fontWeight: 700, fontSize: ".7rem",
+              letterSpacing: ".12em", textTransform: "uppercase",
+              color: hov ? col : C.dim, transition: "color .25s"
+            }}>Ver más →</div>
+            {mapsUrl && (
+              <a href={mapsUrl} target="_blank" rel="noopener"
+                style={{
+                  fontFamily: FONTS.ui, fontWeight: 700, fontSize: ".7rem",
+                  letterSpacing: ".12em", textTransform: "uppercase",
+                  color: hov ? C.tealLight : C.dim, transition: "color .25s"
+                }}>
+                Ver en mapa 🗺️
+              </a>
+            )}
+          </div>
         </div>
       </a>
     </Reveal>

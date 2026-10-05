@@ -42,6 +42,7 @@ export const NEWS = [
         title: "Retiro de la iglesia",
         desc: "Nos vamos juntos a Posada La Campiña. Dos días para descansar, compartir y crecer en comunidad. ¡Anotate y no te lo perdas!",
         link: "#",
+        mapsUrl: "https://maps.app.goo.gl/?q=Posada+La+Campi%C3%B1a,+C%C3%B3rdoba,+Argentina",
     },
 {
         tag: "Serie",
